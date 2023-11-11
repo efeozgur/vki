@@ -4,7 +4,7 @@ import 'package:bmi_calculator/widget_utils.dart';
 import 'package:flutter/material.dart';
 
 class TransitionDot extends AnimatedWidget {
-  TransitionDot({Key key, Listenable animation})
+  TransitionDot({required Key key, required Listenable animation})
       : super(key: key, listenable: animation);
 
   Animation<int> get positionAnimation => IntTween(

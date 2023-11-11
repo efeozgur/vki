@@ -12,9 +12,9 @@ class GenderCard extends StatefulWidget {
   final ValueChanged<Gender> onChanged;
 
   const GenderCard({
-    Key key,
+    required Key key,
     this.gender = Gender.other,
-    this.onChanged,
+    required this.onChanged,
   }) : super(key: key);
 
   @override
@@ -118,7 +118,8 @@ class _GenderCardState extends State<GenderCard>
 class TapHandler extends StatelessWidget {
   final Function(Gender) onGenderTapped;
 
-  const TapHandler({Key key, this.onGenderTapped}) : super(key: key);
+  const TapHandler({required Key key, required this.onGenderTapped})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

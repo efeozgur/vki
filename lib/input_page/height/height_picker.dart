@@ -14,10 +14,10 @@ class HeightPicker extends StatefulWidget {
   final ValueChanged<int> onChange;
 
   const HeightPicker(
-      {Key key,
-      this.height,
-      this.widgetHeight,
-      this.onChange,
+      {required Key key,
+      required this.height,
+      required this.widgetHeight,
+      required this.onChange,
       this.maxHeight = 190,
       this.minHeight = 145})
       : super(key: key);

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class GenderArrow extends AnimatedWidget {
-  const GenderArrow({Key key, Listenable listenable})
+  const GenderArrow({required Key key, required Listenable listenable})
       : super(key: key, listenable: listenable);
 
   double _arrowLength(BuildContext context) => screenAwareSize(32.0, context);

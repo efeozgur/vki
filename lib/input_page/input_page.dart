@@ -50,7 +50,7 @@ class InputPageState extends State<InputPage> with TickerProviderStateMixin {
       children: <Widget>[
         Scaffold(
           appBar: PreferredSize(
-            child: BmiAppBar(),
+            child: const BmiAppBar(),
             preferredSize: Size.fromHeight(appBarHeight(context)),
           ),
           body: Column(
@@ -124,10 +124,10 @@ class InputPageState extends State<InputPage> with TickerProviderStateMixin {
   _goToResultPage() async {
     return Navigator.of(context).push(FadeRoute(
       builder: (context) => ResultPage(
-            weight: weight,
-            height: height,
-            gender: gender,
-          ),
+        weight: weight,
+        height: height,
+        gender: gender,
+      ),
     ));
   }
 }
@@ -137,7 +137,11 @@ class InputSummaryCard extends StatelessWidget {
   final int height;
   final int weight;
 
-  const InputSummaryCard({Key key, this.gender, this.height, this.weight})
+  const InputSummaryCard(
+      {required Key key,
+      required this.gender,
+      required this.height,
+      required this.weight})
       : super(key: key);
 
   @override

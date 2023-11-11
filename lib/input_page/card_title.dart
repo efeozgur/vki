@@ -16,7 +16,8 @@ class CardTitle extends StatelessWidget {
   final String title;
   final String subtitle;
 
-  const CardTitle(this.title, {Key key, this.subtitle}) : super(key: key);
+  const CardTitle(this.title, {required Key key, required this.subtitle})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

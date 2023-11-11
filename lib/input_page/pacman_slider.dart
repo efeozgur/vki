@@ -12,7 +12,10 @@ class PacmanSlider extends StatefulWidget {
   final VoidCallback onSubmit;
   final AnimationController submitAnimationController;
 
-  const PacmanSlider({Key key, this.onSubmit, this.submitAnimationController})
+  const PacmanSlider(
+      {required Key key,
+      required this.onSubmit,
+      required this.submitAnimationController})
       : super(key: key);
 
   @override
@@ -244,9 +247,9 @@ class _AnimatedDotsState extends State<AnimatedDots>
     return AnimatedBuilder(
       animation: animation,
       builder: (context, child) => Opacity(
-            opacity: animation.value,
-            child: child,
-          ),
+        opacity: animation.value,
+        child: child,
+      ),
       child: Dot(size: 9.0),
     );
   }
@@ -266,7 +269,7 @@ class _AnimatedDotsState extends State<AnimatedDots>
 }
 
 class SinusoidalAnimation extends Animatable<double> {
-  SinusoidalAnimation({this.min, this.max});
+  SinusoidalAnimation({required this.min, required this.max});
 
   final double min;
   final double max;
@@ -280,7 +283,7 @@ class SinusoidalAnimation extends Animatable<double> {
 class Dot extends StatelessWidget {
   final double size;
 
-  const Dot({Key key, @required this.size}) : super(key: key);
+  const Dot({required Key key, required this.size}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

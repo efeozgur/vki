@@ -9,7 +9,11 @@ class ResultPage extends StatefulWidget {
   final int weight;
   final Gender gender;
 
-  const ResultPage({Key key, this.height, this.weight, this.gender})
+  const ResultPage(
+      {required Key key,
+      required this.height,
+      required this.weight,
+      required this.gender})
       : super(key: key);
 
   @override
@@ -96,7 +100,11 @@ class ResultCard extends StatelessWidget {
   final double minWeight;
   final double maxWeight;
 
-  ResultCard({Key key, this.bmi, this.minWeight, this.maxWeight})
+  ResultCard(
+      {required Key key,
+      required this.bmi,
+      required this.minWeight,
+      required this.maxWeight})
       : super(key: key);
 
   @override

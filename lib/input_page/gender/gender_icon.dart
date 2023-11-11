@@ -8,7 +8,9 @@ class GenderIconTranslated extends StatelessWidget {
   final Gender gender;
   final bool isSelected;
 
-  const GenderIconTranslated({Key key, this.gender, this.isSelected = false}) : super(key: key);
+  const GenderIconTranslated(
+      {required Key key, required this.gender, this.isSelected = false})
+      : super(key: key);
 
   static final Map<Gender, String> _genderImages = {
     Gender.female: "images/gender_female.svg",
